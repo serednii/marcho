@@ -11,23 +11,21 @@ const  del  = require('del');
 const sync = require('browser-sync').create();
 
 function styles(){
-    // return src('app/scss/**/*.scss')
-    return src('css/**/*.css')
-
-   //.pipe(sass ({outputStyle:'compressed'}).on('error', sass.logError))
+    return src('app/scss/**/*.scss')
+   .pipe(sass ({outputStyle:"expanded"}).on('error', sass.logError))
    .pipe(concat('style.min.css'))
    .pipe(autoprefixer({
        overrideBrowserslist:['last 10 versions'],
        grid:true
     }))
-    .pipe(dest('css'))
+    .pipe(dest('app/css'))
     .pipe(sync.stream())
 }
 
 function browser(){
   sync.init({
     server:{
-      baseDir:'./'
+      baseDir:'app/'
     },
     notify: false
   })
@@ -75,13 +73,12 @@ function cleanDist(){
 }
 
 function watching(){
-   //watch(['app/scss/**/*.scss'],styles);
+   watch(['app/scss/**/*.scss'],styles);
    //watch(['app/js**/*.js','!app/js/main.min.js'], scripts);
    //watch(['app/**/*.html',]).on('change', sync.reload);
     watch(['css/style.css'],styles);
     // watch(['js/**/*.js'], scripts);
    watch(['js**/*.js','!js/main.min.js'], scripts);
-
     watch(['**/*.html',]).on('change', sync.reload);
 }
 

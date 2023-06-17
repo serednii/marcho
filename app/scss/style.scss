@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'vars';
 @import 'fonts';
+@import 'libs';
 @import 'global';
 
 .header{
@@ -22,16 +23,17 @@
     &__list-link{
         color: $title;
         text-transform: uppercase;
-        padding-bottom: 1px;
+        padding: 0 2px 1px;
         transition: all .3s;
-        @extend %quicksand-400;
+        @extend %roboto-400;
     &:hover{
         color: $accent;
         border-bottom: 1px solid $accent;
-        @extend %quicksand-500;
+        @extend %roboto-700;
         }
     }
-    
+   
+      
 }
 
 .user-nav{
@@ -56,8 +58,6 @@
         line-height: 20px;
     }
 }
-
-
 
 
 
@@ -139,13 +139,8 @@
         } 
     }
     &__form-btn{
+        @extend %btn;
         border: none;
-        background-color: $accent;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 12px 26px;
-        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-        cursor: pointer;
     }
     }
     .footer-bottom{
@@ -160,8 +155,81 @@
             vertical-align: middle;
         }
     }
-    
 
+
+}
+
+.top-slider{
+    background-image: url('../images/decor/top-slider-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $bg;
+    padding: 65px 0 45px;
+    &__container{
+        max-width: 1560px;
+    }
+    &__content{
+        padding-left: 175px;
+        padding-top: 125px;
+    }
+    &__item{
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__title{
+        max-width: 670px;
+        font-size: 58px;
+        line-height: 1.2;
+        color: $title;
+        @extend %roboto-700;
+        margin-bottom: 35px;
+    }
+    &__text{
+        max-width: 470px;
+        margin-bottom: 45px;
+    }
+    &__link{
+       @extend %btn;
+       padding: 14px 35px;
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        margin-top: -70px;
+        li{
+            margin: 0 5px;
+            line-height: 0;
+            button{
+                padding: 0;
+                font-size: 0;
+                background-color: transparent;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: $default;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &.slick-active{
+                button{
+                    border-color: $accent;
+                    &::before{
+                        background-color: $accent;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

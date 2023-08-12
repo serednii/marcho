@@ -65,7 +65,7 @@ $(function () {
 
   //-------------------------------------------------
   // Jquery-form-styler
-  $('.select-style, .product-one__item-num').styler();
+    $('.select-style, .product-one__num').styler();
   //-------------------------------
 
   // filter price
@@ -73,13 +73,13 @@ $(function () {
     type: "double",
     prefix: "$",
     onStart: function (data) {
-      $('.filter-prise-from').text(data.from);
-      $('.filter-prise-to').text(data.to);
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
 
     },
     onChange: function (data) {
-      $('.filter-prise-from').text(data.from);
-      $('.filter-prise-to').text(data.to);
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
 
     },
 

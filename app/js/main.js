@@ -127,7 +127,8 @@ $(function () {
     var hoursSpan = clock.querySelector('.promo__hours');
     var minutesSpan = clock.querySelector('.promo__minutes');
     var secondsSpan = clock.querySelector('.promo__seconds');
-
+    
+    const timeinterval = setInterval(updateClock, 1000);
     function updateClock() {
       var t = getTimeRemaining(endtime);
 
@@ -142,7 +143,6 @@ $(function () {
     }
 
     updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
   }
 
   const deadline = $('.promo__clock').attr('data-time');

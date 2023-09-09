@@ -14,6 +14,9 @@
 }
 
 .menu{
+    &__btn{
+        display: none;
+    }
     &__list{
         display: flex;
     }
@@ -128,6 +131,7 @@
     }
     &__form-input{
         background-color: #fff;
+        outline: 1px solid transparent;
         max-width: 320px;
         width: 100%;
         border: none;
@@ -137,6 +141,9 @@
             color: $default;
             font-size: 16px;
         } 
+        &:focus{
+            outline: 1px solid $accent;
+        }
     }
     &__form-btn{
         @extend %btn;
@@ -145,8 +152,9 @@
     }
     }
     .footer-bottom{
-        height: 75px;
+        min-height: 75px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         font-size: 12px;
@@ -1967,6 +1975,19 @@
         
     }
 }
-@import 'media';
+
+
+
+
+@import 'media_header';
+@import 'media_footer';
+@import 'media_top-slider';
+@import 'media_categories';
+@import 'media_video-fashion';
+@import 'media_product';
+@import 'media_promo';
+@import 'media_blog';
+
+
 
   

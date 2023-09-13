@@ -852,6 +852,9 @@
        width: 370px;
        margin-right: 30px; 
     }
+    &__filter-btn{
+        display: none;
+    }
 }
 .filter{
     &__item{
@@ -1992,3 +1995,7 @@
 @import 'media_404';
 @import 'media_blog-page';
 @import 'media_blog-one';
+
+@import 'media_contact';
+@import 'media_shop';
+@import 'media_product-page';

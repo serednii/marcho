@@ -6,6 +6,10 @@ $(function () {
     $('.menu__btn').toggleClass('menu__btn--active');
   });
 
+  $('.shop__filter-btn').on('click', function (){
+    $('.shop__filters').slideToggle();
+  });
+
   $('.footer-top__title').on('click', function () {
     $(this).next().slideToggle();
     $(this).toggleClass('active');
@@ -41,7 +45,15 @@ $(function () {
     asNavFor: '.product-slide__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breackpoint: 1051,
+        settings: {
+          draggable: true
+        }
+      }
+    ]
   });
 
 
@@ -56,11 +68,13 @@ $(function () {
   $('.button-list').on('click', function () {
     //Добавляємо клас 'product-item--list до контенту
     $('.product-item').addClass('product-item--list')
+    $('.shop-content__inner').addClass('.shop-content__nogrid')
   });
 
   $('.button-grid').on('click', function () {
     //Удаляэмо  клас 'product-item--list' з контенту
     $('.product-item').removeClass('product-item--list')
+    $('.shop-content__inner').removeClass('.shop-content__nogrid')
   });
   //-------------------------------------------------
 

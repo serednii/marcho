@@ -46,6 +46,7 @@
    padding-left: 25px;
    right: -27px;
    position: relative;
+   flex-wrap: wrap;
    &::before{
       content: '';
       position: absolute;

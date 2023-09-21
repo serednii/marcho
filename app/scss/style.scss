@@ -1509,9 +1509,6 @@
         display: flex;
         justify-content: space-between;
     }
-    &__input{
-
-    }
     &__text-input{
         width: 570px;
         display: inline-block;
@@ -1997,5 +1994,5 @@
 @import 'media_blog-one';
 
 @import 'media_contact';
-@import 'media_shop';
+ @import 'media_shop';
 @import 'media_product-page';

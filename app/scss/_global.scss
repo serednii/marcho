@@ -82,6 +82,13 @@
    }
    &__link{
       color: inherit;
+      padding: 3px 5px;
+      &:focus{
+         border-color: #f9fafb;
+         box-shadow: 0 0 0 0.25rem rgba(211,212,213,.5);
+         outline: 0;
+         border-radius: 10px;
+     }
    }
  }
 
@@ -100,6 +107,13 @@
    &__item{
       padding: 0 15px;
    }
+   &__link{
+      &:focus{
+         border-color: #b02a37;
+         box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+         outline: 0; 
+     }
+   }
    &__link--active{
       color: $accent;
    }
@@ -113,6 +127,11 @@
          height: 10px;
          top: 5px;
       }
+      &:focus{
+         border-color: #b02a37;
+         box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+         outline: 0; 
+     }
    }
    &__prev{
       padding-left: 15px;

@@ -23,10 +23,9 @@
         }
     }
 }
-    .logo__animation{
+
+.logo__animation{
         position: relative;
-
-
         animation: render 4s ease-in-out infinite;
 }
 
@@ -275,7 +274,7 @@
 
 
 .top-slider{
-    background-image: url('../images/decor/top-slider-bg.png');
+    background-image: url('../images/decor/top-slider-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $bg;
@@ -361,12 +360,12 @@
 
 .categories-info{
     padding: 120px 0;
-    background-image: url('../images/decor/categories-left-bg.png');
+    background-image: url('../images/decor/categories-left-bg.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center left;
     &__inner{
-        background-image: url('../images/decor/categories-right-bg.png');
+        background-image: url('../images/decor/categories-right-bg.jpg');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center right;

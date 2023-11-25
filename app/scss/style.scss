@@ -24,7 +24,7 @@
     }
 }
 
-.logo__animation{
+.header__logo-animation{
         position: relative;
         animation: render 4s ease-in-out infinite;
 }
@@ -190,7 +190,8 @@
             border-radius: 10px;
         }
     }
-    &__title{
+    
+    &__subtitle{
         color: $title;
         @extend %roboto-400;
         margin-bottom: 40px;
@@ -271,10 +272,8 @@
     }
 }
 
-
-
 .top-slider{
-    background-image: url('../images/decor/top-slider-bg.jpg');
+    background-image: url('../images/decor/top-slider-bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $bg;
@@ -360,12 +359,12 @@
 
 .categories-info{
     padding: 120px 0;
-    background-image: url('../images/decor/categories-left-bg.jpg');
+    background-image: url('../images/decor/categories-left-bg.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center left;
     &__inner{
-        background-image: url('../images/decor/categories-right-bg.jpg');
+        background-image: url('../images/decor/categories-right-bg.webp');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center right;
@@ -749,7 +748,7 @@
 }
 
 .promo{
-    background-image: url(../images/promo-bg.jpg);
+    background-image: url(../images/promo-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1055,12 +1054,12 @@
     }
 }
 .filter{
-    &__item{
+    &-item{
         padding: 35px 30px 40px;
         border: 1px solid #ececec;
         margin-bottom: 40px;
     }
-    &__title{
+    &-title{
         text-transform: uppercase;
         color: $title;
         font-size: 22px;
@@ -1640,7 +1639,7 @@
             display: block;
         }
     }
-    &__content-item--text{
+    &__content-item-text{
         margin-bottom: 30px;
     }
 }

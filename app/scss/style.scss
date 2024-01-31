@@ -122,6 +122,7 @@
     padding: 70px 0 40px;
     border-bottom: 1px solid #ececec;
     display: flex;
+    justify-content: center;
     color: #8d8d8d;
     gap: 30px;
     a{
@@ -373,7 +374,9 @@
 
 .info{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-bottom: 110px;
     position: relative;
     &::before,
@@ -508,12 +511,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        margin-bottom: 75px;
     }
     &__content{
         max-width: 570px;
     }
     &__suptitle{
-        padding-top: 75px;
         font-size: 22px;
         color: $accent;
         text-transform: uppercase;
@@ -748,7 +751,6 @@
 }
 
 .promo{
-    background-image: url(../images/promo-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -759,6 +761,9 @@
         width: 100%;
         margin-left: auto;
     }
+    &__title{
+        margin-bottom: 65px;
+    }
     &__subtitle{
         color: $accent;
         text-transform: uppercase;
@@ -768,7 +773,7 @@
     &__clock{
         display: flex;
         justify-content: space-between;
-        margin-top: 55px;
+        margin-bottom: 55px;
     }
     &__clock-item{
         background-color: #fff;
@@ -790,9 +795,9 @@
         text-transform: uppercase;
         color: $title;
         display: inline-block;
+        background-color: transparent;
         border: 1px solid $accent;
         padding: 14px 27px;
-        margin-top: 55px;
         &:focus{
             border-color: #b02a37;
             box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
@@ -804,10 +809,11 @@
 .partners{
     padding-top: 75px;
     &__list{
-        height: 170px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 85px;
+        flex-wrap: wrap;
     }
 }
 
@@ -819,7 +825,9 @@
     background-position: center center;
     &__items{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
         position: relative;
         &::after{
             content: '';
@@ -894,7 +902,7 @@
         content: '';
         width: 10px;
         height: 8px;
-        background-image: url('../images/blog/arrow.svg');
+        background-image: url('../images/blog/arrow.');
         position: absolute;
         top: 8px;
         right: -14px;
@@ -1171,6 +1179,7 @@
 
         }
     }
+    
     &__input{
         @extend %checkbox-hidden; 
         &:checked + .filter-color__checkbox{

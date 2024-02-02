@@ -3,6 +3,7 @@
 @import 'fonts';
 @import 'libs';
 @import 'global';
+@import 'burger';
 
 .header{
     padding: 40px 0;
@@ -41,13 +42,13 @@
    
 }
 
-.bootstrap-btns{
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+// .bootstrap-btns{
+//     display: flex;
+//     gap: 10px;
+//     margin-top: 20px;
+//     margin-bottom: 20px;
 
-}
+// }
 
 .menu{
     &__btn{
@@ -59,18 +60,21 @@
     &__list-item + .menu__list-item{
         padding-left: 35px;
     }
+
     &__list-link{
         color: $title;
         text-transform: uppercase;
         padding: 3px 5px;
         transition: all .3s;
         @extend %roboto-400;
+
     &:hover{
         color: $accent;
         border-bottom: 1px solid $accent;
         @extend %roboto-700;
         }
-        &:focus{
+
+    &:focus{
             background-color: #f9fafb;
             border-color: #f9fafb;
             box-shadow: 0 0 0 0.25rem rgba(211,212,213,.5);
@@ -119,7 +123,8 @@
     background-color: $bg;
 
 .footer-top{
-    padding: 70px 0 40px;
+
+    padding: 70px 20px 40px;
     border-bottom: 1px solid #ececec;
     display: flex;
     justify-content: center;
@@ -149,6 +154,7 @@
             border-radius: 10px;
         }
     }
+
     &__adress,
     &__email,
     &__phone{
@@ -213,6 +219,7 @@
     }
     &__text{
         margin-bottom: 25px;
+        max-width: 500px;
     }
     &__form-input{
         background-color: #fff;
@@ -265,8 +272,8 @@
         max-width: 1700px;
         margin: 0 auto;
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
+        background-size: contain;
+        background-position: center;
         text-align: center;
         padding: 120px 0 130px;
 
@@ -274,35 +281,55 @@
 }
 
 .top-slider{
-    background-image: url('../images/decor/top-slider-bg.webp');
+    background-image: url('../images/decor/top-slider-bg.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $bg;
-    padding: 65px 0 45px;
-    &__container{
-        max-width: 1560px;
-    }
+  
     &__content{
-        padding-left: 175px;
-        padding-top: 125px;
+        padding-left: 364px;
+        padding-top: 160px;
     }
+
     &__item{
-        display: flex !important;
-        justify-content: space-between;
+        position: relative;
+        min-height: 676px;
+
     }
+
+    &__images{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;  
+    }
+
+    &__img{
+        position: absolute;
+        object-fit: contain;
+        bottom: 0;
+        width: 650px;
+        height: 630px;
+        right: 222px;
+    }
+
     &__title{
         max-width: 670px;
         font-size: 58px;
         line-height: 1.2;
         color: $title;
         @extend %roboto-700;
-        margin-bottom: 35px;
+        margin-bottom: 22px;
     }
     &__text{
         max-width: 470px;
-        margin-bottom: 45px;
+        line-height: 1.4;
+        margin-bottom: 60px;
     }
     &__link{
+        min-width: 160px;
+        display: inline-block;
        @extend %btn;
        padding: 14px 35px;
        &:focus{
@@ -313,9 +340,13 @@
     }
     }
     .slick-dots{
+        position: absolute;
+        bottom: 43px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
-        margin-top: -70px;
+        // margin-top: -70px;
         li{
             margin: 0 5px;
             line-height: 0;
@@ -548,8 +579,10 @@
 }
 
 .product{
-    text-align: center;
     padding: 105px 0 120px;
+    &__inner{
+        margin: 0 auto;
+    }
     &__items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -558,10 +591,11 @@
     &__link{
         text-transform: uppercase;
         color: $title;
-        display: inline-block;
+        display: block;
         border: 1px solid $accent;
         padding: 14px 27px;
-        margin-top: 55px;
+        margin: 55px auto 0;
+        background-color: transparent;
         &:focus{
             border-color: #b02a37;
             box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
@@ -573,6 +607,7 @@
 .product-item{
     max-width: 370px;
     text-align: center;
+    margin: 0 auto;
     &.product-item--list{
         min-width: 100%;
         display: flex;
@@ -752,8 +787,8 @@
 
 .promo{
     background-repeat: no-repeat;
+    background-color: white;
     background-size: cover;
-    background-position: center center;
     padding: 150px 0 160px;
     text-align: center;
     &__inner{
@@ -899,13 +934,14 @@
         }
     }
     &__item-link::after{
-        content: '';
+        content: "";
         width: 10px;
         height: 8px;
-        background-image: url('../images/blog/arrow.');
+        background-image: url(../images/blog/arrow.svg);
         position: absolute;
-        top: 8px;
-        right: -14px;
+        background-size: 10px 8px;
+        top: 10px;
+        right: -18px;
     }
 
 }
@@ -2154,8 +2190,7 @@
         display: flex;
     }
     &__author-img{
-        width: 140px;
-        height: 140px;
+        max-width: 140px;
         margin-right: 30px;
         object-fit: cover;
     }
@@ -2173,12 +2208,17 @@
         text-transform: uppercase;
     }
 }
-.map{
-    padding-bottom: 120px;
-}
-#map{
-    width: 100%;
-    height: 450px;
+.map {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    aspect-ratio: 16 / 9;
+
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+
 }
 
 .contact{

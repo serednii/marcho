@@ -18,25 +18,27 @@
 <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="images/logo.webp" alt="logo">
+        <a class="logo header__logo-animation" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
         <nav class="menu">
-          <button class="menu__btn">
-            <span></span>
+           
+          <button class="burger menu__btn" data-burger aria-label="open menu">
+            <span class="burger__line"></span>
           </button>
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="menu__list-link menu__list-link--active" href="index.html">home</a>
+        
+          <ul class="menu__list" data-menu>
+            <li class="menu__list-item" data-menu-item>
+              <a class="menu__list-link menu__list-link--active" data-menu-item href="index.html">home</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="shop.html">shop</a>
+              <a class="menu__list-link" data-menu-item href="shop.html">shop</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">blog</a>
+              <a class="menu__list-link" data-menu-item href="blog.html">blog</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="contact.html">contact</a>
+              <a class="menu__list-link" data-menu-item href="contact.html">contact</a>
             </li>
           </ul>
         </nav>
@@ -92,7 +94,11 @@
       <div class="container">
         <div class="blog-page__inner">
           <div class="blog-page__content blog-one__content">
-            <img class="blog-page__img" src="images/blog/page-1.webp" alt="blog img">
+            <picture>
+              <source srcset="images/blog/page-1.webp" type="image/webp">
+              <source srcset="images/blog/page-1.avif" type="image/avif">
+              <img class="blog-page__img"  src="images/blog/page-1.jpg"  alt="blog img">
+            </picture>
             <div class="blog-one__text">
               <ul class="blog-one__info">
                  <li class="blog-one__info-item">
@@ -135,7 +141,11 @@
                 Quis ipsum suspendisse ultrices gravida. 
                 Risus comdoumar viverra more maecenas accumsan lacus vel fac
               </p>
-              <img class="blog-one__left-img" src="images/blog/blog-one.webp" alt="blog one">
+              <picture>
+                <source srcset="images/blog/blog-one.webp" type="image/webp">
+                <source srcset="images/blog/blog-one.avif" type="image/avif">
+                <img class="blog-one__left-img"  src="images/blog/blog-one.jpg"  alt="blog one">
+              </picture>
               <p>
                 Lorem ipsum dolor sit amet, consectur picing elit, 
                 sed do eusmod tempor incididunt ut mor more labore a doore 
@@ -184,7 +194,11 @@
               </div>
             </div>
             <div class="blog-one__author">
-              <img class="blog-one__author-img" src="images/blog/blog-one-author.webp" alt="author images">
+              <picture>
+                <source srcset="images/blog/blog-one-author.webp" type="image/webp">
+                <source srcset="images/blog/blog-one-author.avif" type="image/avif">
+                <img class="blog-one__author-img"  src="images/blog/blog-one-author.jpg"  alt="author images">
+              </picture>
               <div class="blog-one__author-info">
                 <h2 class="blog-one__author-name">JHON DOE</h2>
                 <p class="blog-one__author-text">
@@ -199,7 +213,11 @@
               O2 COMMENTS
             </div>
                   <div class="comments">
-                    <img class="comments__img" src="images/avatar/1.webp" alt="avatar">
+                    <picture>
+                      <source srcset="images/avatar/1.webp" type="image/webp">
+                      <source srcset="images/avatar/1.avif" type="image/avif">
+                      <img class="comments__img"  src="images/avatar/1.jpg"  alt="avatar">
+                    </picture>
                     <div class="comments__content">
                       <div class="comments__content-top">
                         <p class="comments__content-name">Michle Jhon</p>
@@ -216,7 +234,11 @@
                       </div>
                   </div>
                   <div class="comments">
-                    <img class="comments__img" src="images/avatar/2.webp" alt="avatar">
+                    <picture>
+                      <source srcset="images/avatar/2.webp" type="image/webp">
+                      <source srcset="images/avatar/2.avif" type="image/avif">
+                      <img class="comments__img"  src="images/avatar/2.jpg"  alt="avatar">
+                    </picture>
                     <div class="comments__content">
                       <div class="comments__content-top">
                         <p class="comments__content-name">Michle Jhon</p>
@@ -258,7 +280,11 @@
             </div>
 
             <div class="person">
-              <img class="person__img" src="images/blog/person.webp" alt="person images">
+              <picture>
+                <source srcset="images/blog/person.webp" type="image/webp">
+                <source srcset="images/blog/person.avif" type="image/avif">
+                <img class="person__img"  src="images/blog/person.jpg"  alt="person images">
+              </picture>
               <div class="person__name">
                 Tom D. Maianay
               </div>
@@ -293,7 +319,11 @@
               </h3>
               <div class="latest-post__item">
                 <a class="latest-post__img-link" href="#">
-                  <img class="latest-post__img" src="images/blog/aside-1.webp" alt="latest-post images">
+                  <picture>
+                    <source srcset="images/blog/aside-1.webp" type="image/webp">
+                    <source srcset="images/blog/aside-1.avif" type="image/avif">
+                    <img class="latest-post__img"  src="images/blog/aside-1.jpg"  alt="latest-post images">
+                  </picture>
                 </a>
                 <div class="latest-post__box">
                   <a class="latest-post__title-link" href="#">
@@ -306,7 +336,11 @@
               </div>
               <div class="latest-post__item">
                 <a class="latest-post__img-link" href="#">
-                  <img class="latest-post__img" src="images/blog/aside-2.webp" alt="latest-post images">
+                  <picture>
+                    <source srcset="images/blog/aside-2.webp" type="image/webp">
+                    <source srcset="images/blog/aside-2.avif" type="image/avif">
+                    <img class="latest-post__img"  src="images/blog/aside-2.jpg"  alt="latest-post images">
+                  </picture>
                 </a>
                 <div class="latest-post__box">
                   <a class="latest-post__title-link" href="#">
@@ -319,7 +353,11 @@
               </div>
               <div class="latest-post__item">
                 <a class="latest-post__img-link" href="#">
-                  <img class="latest-post__img" src="images/blog/aside-3.webp" alt="latest-post images">
+                  <picture>
+                    <source srcset="images/blog/aside-3.webp" type="image/webp">
+                    <source srcset="images/blog/aside-3.avif" type="image/avif">
+                    <img class="latest-post__img"  src="images/blog/aside-3.jpg"  alt="latest-post images">
+                  </picture>
                 </a>
                 <div class="latest-post__box">
                   <a class="latest-post__title-link" href="#">
@@ -332,7 +370,11 @@
               </div>
               <div class="latest-post__item">
                 <a class="latest-post__img-link" href="#">
-                  <img class="latest-post__img" src="images/blog/aside-4.webp" alt="latest-post images">
+                  <picture>
+                    <source srcset="images/blog/aside-4.webp" type="image/webp">
+                    <source srcset="images/blog/aside-4.avif" type="image/avif">
+                    <img class="latest-post__img"  src="images/blog/aside-4.jpg"  alt="latest-post images">
+                  </picture>
                 </a>
                 <div class="latest-post__box">
                   <a class="latest-post__title-link" href="#">
@@ -431,14 +473,16 @@
     <div class="footer-top">
       <div class="footer-top__item footer-top__contact">
       <a class="logo" href="index.html">
-        <img class="logo__img" src="images/logo.webp" alt="logo">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
-      <a class="footer-top__adress" href="#">
-        No. 342 - London Oxford Street,
-        012 United States
-      </a>
-      <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
-      <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      <address>
+        <a class="footer-top__adress" href="#">
+          No. 342 - London Oxford Street,
+          012 United States
+        </a>
+        <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+        <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      </address>
       <ul class="footer-top__social-list">
         <li class="footer-top__social-item">
           <a class="footer-top__social-link" href="#">
@@ -536,9 +580,9 @@
       </p>
       <div class="footer-bottom__accept">
         We Accept
-        <img class="footer-bottom__accept-img" src="images/icons/mastercard.webp" alt="we accept">
-        <img class="footer-bottom__accept-img" src="images/icons/visa.webp" alt="we accept" >
-        <img class="footer-bottom__accept-img" src="images/icons/paypal.webp" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/mastercard.svg" alt="we accept">
+        <img class="footer-bottom__accept-img" src="images/icons/visa.svg" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/paypal.svg" alt="we accept" >
       </div>
     </div>
   </div>

@@ -18,25 +18,27 @@
 <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="images/logo.webp" alt="logo">
+        <a class="logo header__logo-animation" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
         <nav class="menu">
-          <button class="menu__btn">
-            <span></span>
+           
+          <button class="burger menu__btn" data-burger aria-label="open menu">
+            <span class="burger__line"></span>
           </button>
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="menu__list-link menu__list-link--active" href="index.html">home</a>
+        
+          <ul class="menu__list" data-menu>
+            <li class="menu__list-item" data-menu-item>
+              <a class="menu__list-link menu__list-link--active" data-menu-item href="index.html">home</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="shop.html">shop</a>
+              <a class="menu__list-link" data-menu-item href="shop.html">shop</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">blog</a>
+              <a class="menu__list-link" data-menu-item href="blog.html">blog</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="contact.html">contact</a>
+              <a class="menu__list-link" data-menu-item href="contact.html">contact</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +65,7 @@
 <main class="main">
 
     <section class="top">
-        <div class="top-container" style="background-image: url('images/top-bg.jpg');">
+        <div class="top-container" style="background-image: url('images/top-bg.webp');">
                 <h1 class="top__title title">PRODUCT</h1>
                 <div class="bleadcrumbs">
                     <ul class="bleadcrumbs__list">
@@ -93,30 +95,62 @@
             <div class="product-one__slide product-slide">
               <div class="product-slide__thumb">
                 <div class="product-slide__thumb-item">
-                  <img src="images/product/item/1.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/1.webp" type="image/webp">
+                    <source srcset="images/product/item/1.avif" type="image/avif">
+                    <img src="images/product/item/1.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__thumb-item">
-                  <img src="images/product/item/2.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/2.webp" type="image/webp">
+                    <source srcset="images/product/item/2.avif" type="image/avif">
+                    <img src="images/product/item/2.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__thumb-item">
-                  <img src="images/product/item/3.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/3.webp" type="image/webp">
+                    <source srcset="images/product/item/3.avif" type="image/avif">
+                    <img src="images/product/item/3.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__thumb-item">
-                  <img src="images/product/item/4.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/4.webp" type="image/webp">
+                    <source srcset="images/product/item/4.avif" type="image/avif">
+                    <img src="images/product/item/4.jpg"  alt="product slide">
+                  </picture>
                 </div>
               </div>
               <div class="product-slide__big">
                 <div class="product-slide__big-item">
-                  <img src="images/product/item/1.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/1.webp" type="image/webp">
+                    <source srcset="images/product/item/1.avif" type="image/avif">
+                    <img src="images/product/item/1.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__big-item">
-                  <img src="images/product/item/2.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/2.webp" type="image/webp">
+                    <source srcset="images/product/item/2.avif" type="image/avif">
+                    <img src="images/product/item/2.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__big-item">
-                  <img src="images/product/item/3.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/3.webp" type="image/webp">
+                    <source srcset="images/product/item/3.avif" type="image/avif">
+                    <img src="images/product/item/3.jpg"  alt="product slide">
+                  </picture>
                 </div>
                 <div class="product-slide__big-item">
-                  <img src="images/product/item/4.webp" alt="product slide">
+                  <picture>
+                    <source srcset="images/product/item/4.webp" type="image/webp">
+                    <source srcset="images/product/item/4.avif" type="image/avif">
+                    <img src="images/product/item/4.jpg"  alt="product slide">
+                  </picture>
                 </div>
               </div>  
             </div>
@@ -298,7 +332,11 @@
             <div class="product-tabs__content-item 
             product-tabs__content-item--active" id="tab-3">
               <div class="comments">
-                <img class="comments__img" src="images/avatar/1.webp" alt="avatar">
+                <picture>
+                  <source srcset="images/avatar/1.webp" type="image/webp">
+                  <source srcset="images/avatar/1.avif" type="image/avif">
+                  <img class="comments__img"  src="images/avatar/1.jpg"  alt="avatar">
+                </picture>
                 <div class="comments__content">
                   <div class="comments__content-top">
                     <p class="comments__content-name">Michle Jhon</p>
@@ -316,7 +354,11 @@
                   </div>
               </div>
               <div class="comments">
-                <img class="comments__img" src="images/avatar/2.webp" alt="avatar">
+                <picture>
+                  <source srcset="images/avatar/2.webp" type="image/webp">
+                  <source srcset="images/avatar/2.avif" type="image/avif">
+                  <img class="comments__img"  src="images/avatar/2.jpg"  alt="avatar">
+                </picture>
                 <div class="comments__content">
                   <div class="comments__content-top">
                     <p class="comments__content-name">Michle Jhon</p>
@@ -334,7 +376,11 @@
                   </div>
               </div>
               <div class="comments">
-                <img class="comments__img" src="images/avatar/3.webp" alt="avatar">
+                <picture>
+                  <source srcset="images/avatar/3.webp" type="image/webp">
+                  <source srcset="images/avatar/3.avif" type="image/avif">
+                  <img class="comments__img"  src="images/avatar/3.jpg"  alt="avatar">
+                </picture>
                 <div class="comments__content">
                   <div class="comments__content-top">
                     <p class="comments__content-name">Michle Jhon</p>
@@ -446,7 +492,11 @@
         <div class="related__items">
           <div class="product-item">
             <div class="product-item__img-box">
-              <img class="product-item__images" src="images/product/5.webp" alt="product">
+              <picture>
+                <source srcset="images/product/5.webp" type="image/webp">
+                <source srcset="images/product/5.avif" type="image/avif">
+                <img class="product-item__images"  src="images/product/5.jpg"  alt="product images">
+              </picture>
             </div>
             <div class="product-item__wrapper-box">
               <div class="product-item__box">
@@ -463,7 +513,13 @@
           </div>
           <div class="product-item product-item--sale">
             <div class="product-item__img-box">
-              <img class="product-item__images" src="images/product/3.webp" alt="product">
+              <picture>
+                <picture>
+                  <source srcset="images/product/1.webp" type="image/webp">
+                  <source srcset="images/product/1.avif" type="image/avif">
+                  <img class="product-item__images"  src="images/product/1.jpg"  alt="product images">
+                </picture>
+              </picture>
             </div>
             <div class="product-item__wrapper-box">
               <div class="product-item__box">
@@ -480,7 +536,11 @@
           </div>
           <div class="product-item">
             <div class="product-item__img-box">
-              <img class="product-item__images" src="images/product/4.webp" alt="product">
+              <picture>
+                <source srcset="images/product/4.webp" type="image/webp">
+                <source srcset="images/product/4.avif" type="image/avif">
+                <img class="product-item__images"  src="images/product/4.jpg"  alt="product images">
+              </picture>
             </div>
             <div class="product-item__wrapper-box">
               <div class="product-item__box">
@@ -497,7 +557,11 @@
           </div>
           <div class="product-item product-item--sale">
             <div class="product-item__img-box">
-              <img class="product-item__images" src="images/product/2.webp" alt="product">
+              <picture>
+                <source srcset="images/product/2.webp" type="image/webp">
+                <source srcset="images/product/2.avif" type="image/avif">
+                <img class="product-item__images"  src="images/product/2.jpg"  alt="product images">
+              </picture>
             </div>
             <div class="product-item__wrapper-box">
               <div class="product-item__box">
@@ -521,14 +585,16 @@
     <div class="footer-top">
       <div class="footer-top__item footer-top__contact">
       <a class="logo" href="index.html">
-        <img class="logo__img" src="images/logo.webp" alt="logo">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
-      <a class="footer-top__adress" href="#">
-        No. 342 - London Oxford Street,
-        012 United States
-      </a>
-      <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
-      <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      <address>
+        <a class="footer-top__adress" href="#">
+          No. 342 - London Oxford Street,
+          012 United States
+        </a>
+        <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+        <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      </address>
       <ul class="footer-top__social-list">
         <li class="footer-top__social-item">
           <a class="footer-top__social-link" href="#">
@@ -626,9 +692,9 @@
       </p>
       <div class="footer-bottom__accept">
         We Accept
-        <img class="footer-bottom__accept-img" src="images/icons/mastercard.webp" alt="we accept">
-        <img class="footer-bottom__accept-img" src="images/icons/visa.webp" alt="we accept" >
-        <img class="footer-bottom__accept-img" src="images/icons/paypal.webp" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/mastercard.svg" alt="we accept">
+        <img class="footer-bottom__accept-img" src="images/icons/visa.svg" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/paypal.svg" alt="we accept" >
       </div>
     </div>
   </div>

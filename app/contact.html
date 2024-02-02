@@ -19,25 +19,27 @@
 <header class="header">
     <div class="container">
       <div class="header__inner">
-        <a class="logo" href="index.html">
-          <img class="logo__img" src="images/logo.webp" alt="logo">
+        <a class="logo header__logo-animation" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
         <nav class="menu">
-          <button class="menu__btn">
-            <span></span>
+           
+          <button class="burger menu__btn" data-burger aria-label="open menu">
+            <span class="burger__line"></span>
           </button>
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="menu__list-link menu__list-link--active" href="index.html">home</a>
+        
+          <ul class="menu__list" data-menu>
+            <li class="menu__list-item" data-menu-item>
+              <a class="menu__list-link menu__list-link--active" data-menu-item href="index.html">home</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="shop.html">shop</a>
+              <a class="menu__list-link" data-menu-item href="shop.html">shop</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="blog.html">blog</a>
+              <a class="menu__list-link" data-menu-item href="blog.html">blog</a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="contact.html">contact</a>
+              <a class="menu__list-link" data-menu-item href="contact.html">contact</a>
             </li>
           </ul>
         </nav>
@@ -62,7 +64,6 @@
     </div>
   </header>
 <main class="main">
-
     <section class="top">
         <div class="top-container" style="background-image: url('images/top-bg.webp');">
             <div class="container">
@@ -84,13 +85,9 @@
             </div>
         </div>
     </section>
-
-    <div class="map">
-      <div class="container">
-        <div id="map">
-
-        </div>
-      </div>
+    <div id="map" class="map">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A64bd618d2990a028513dfe6266d2bbd05d120997e7ed03996709aea1739c1922&amp;width=480&amp;height=335&amp;lang=ru_RU&amp;scroll=true"></script>
+      <script src="./js/_map.js"></script>
     </div>
 
     <section class="contact">
@@ -145,14 +142,16 @@
     <div class="footer-top">
       <div class="footer-top__item footer-top__contact">
       <a class="logo" href="index.html">
-        <img class="logo__img" src="images/logo.webp" alt="logo">
+        <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
-      <a class="footer-top__adress" href="#">
-        No. 342 - London Oxford Street,
-        012 United States
-      </a>
-      <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
-      <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      <address>
+        <a class="footer-top__adress" href="#">
+          No. 342 - London Oxford Street,
+          012 United States
+        </a>
+        <a class="footer-top__email" href="mailto:Youremail@gmail.com">Youremail@gmail.com</a>
+        <a class="footer-top__phone" href="tel:+02838388393">+0283 838 8393</a>
+      </address>
       <ul class="footer-top__social-list">
         <li class="footer-top__social-item">
           <a class="footer-top__social-link" href="#">
@@ -250,262 +249,15 @@
       </p>
       <div class="footer-bottom__accept">
         We Accept
-        <img class="footer-bottom__accept-img" src="images/icons/mastercard.webp" alt="we accept">
-        <img class="footer-bottom__accept-img" src="images/icons/visa.webp" alt="we accept" >
-        <img class="footer-bottom__accept-img" src="images/icons/paypal.webp" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/mastercard.svg" alt="we accept">
+        <img class="footer-bottom__accept-img" src="images/icons/visa.svg" alt="we accept" >
+        <img class="footer-bottom__accept-img" src="images/icons/paypal.svg" alt="we accept" >
       </div>
     </div>
   </div>
 </footer>
 </div>
 
-
-<!-- prettier-ignore -->
-<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-    ({key: "", v: "weekly"});
-    
-    
-    let map;
-
-async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
-
-  map = new Map(document.getElementById("map"), {
-    center: { lat: 40.71432268277566, lng: -74.00634474809839 },
-    zoom: 13,
-    styles:[
-    {
-        "featureType": "all",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#a31645"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "weight": "3.79"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffecf0"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#a31645"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "saturation": "0"
-            },
-            {
-                "lightness": "0"
-            },
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#d89ca8"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": "0"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "color": "#a31645"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "lightness": "84"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#d89ca8"
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#fedce3"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    }
-]
-  });
-}
-
-initMap();
-
-</script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

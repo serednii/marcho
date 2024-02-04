@@ -595,7 +595,7 @@
         line-height: 1.5;
     }
     &__link{
-        // @extend %btn;
+        @extend %btn;
         &:focus{
             border-color: #b02a37;
             box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
@@ -707,6 +707,7 @@
         .product-item__title{
             order: -1;
             width: 100%;
+           font-size: 22px;
         }
         .product-item__price{
             order: -1;
@@ -816,7 +817,7 @@
     &--sale{
         .product-item__img-box::before{
             content: 'SALE';
-            // @extend %btn;
+            @extend %sale;
             position: absolute;
             top: 25px;
             left: 25px; 
@@ -1960,17 +1961,20 @@
             outline: 0; 
         }
     }
+    
     &__img{
         max-width: 770px;
         height: 450px;
         object-fit: cover;
         display: block;
     }
+
     &__item-box{
         border: 1px solid #ececec;
         border-top: none;
         padding: 40px;
     }
+
     &__item-title{
         color: #29282d;
         font-size: 22px;
@@ -1985,12 +1989,16 @@
 
     .blog-box{
         justify-content: start;
+
         &__author{
             margin-right: 30px;
         }
     }
 
 }
+
+
+
 .person{
    border: 1px solid #ececec;
    margin-bottom: 40px;

@@ -1,4 +1,5 @@
-const mailPath = 'http://smm.zzz.com.ua/simple.php'
+const mailPath = 'http://nastya03.zzz.com.ua/send-mail.php';
+
 function formDataToObject(formData) {
   let jsonObject = {};
   for (const [key, value] of formData.entries()) {
@@ -6,22 +7,14 @@ function formDataToObject(formData) {
   }
   return jsonObject;
 }
-document.querySelectorAll('.uniForm').forEach((el) => {
+
+document.querySelectorAll('.send-form-mail').forEach((el) => {
 
   el.addEventListener('submit', function (e) {
+    console.log(e)
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
     console.log(data)
-    // const data = {
-    //   name: 'joh',
-    //   age: 78
-    // };
-
-    // var data = {
-    //   project_name: 'usernamedsfsfdfert',
-    //   admin_email: 'passwordscsdd',
-    //   form_subject: "jhfssjfhsfd",
-    // };
 
     fetch(mailPath, {
       method: 'POST',
@@ -49,14 +42,8 @@ document.querySelectorAll('.uniForm').forEach((el) => {
       .catch(error => {
         console.error('Помилка:', error);
       });
-
-
-
-
-
-
-
-
   })
 
 })
+
+

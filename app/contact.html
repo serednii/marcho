@@ -120,8 +120,8 @@
               </li>
             </ul>
           </div>
-          <form action="" class="contact__form uniForm">
-            <!-- Hidden Required Fields -->
+          <!-- <form action="" class="contact__form uniForm">
+           
             <input type="hidden" name="project_name" value="marcho">
             <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
             <input type="hidden" name="form_subject" value="Contact">
@@ -134,7 +134,26 @@
             <textarea class="contact__form-textarea" name="message" id="" cols="30" rows="10"
               placeholder="Message here"></textarea>
             <button class="contact__form-btn button" type="submit">send message</button>
+          </form> -->
+
+           <form action="" class="contact__form send-form-mail">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="marcho">
+            <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
+            <input type="hidden" name="form_subject" value="Marcho">
+            <p class="contact__form-title">Contact Form</p>
+            <div class="contact__form-box">
+              <input class="contact__form-input" value="Mykola" name="yourName" type="text" placeholder="Your Name">
+              <input class="contact__form-input" value="seredniimykola@gmail.com" name="email" type="text"
+                placeholder="Your E-mail Address">
+            </div>
+            <input class="contact__form-input" value="new message test" name="subject" type="text"
+              placeholder="Subject">
+            <textarea class="contact__form-textarea" name="message" id="" cols="30" rows="10"
+              placeholder="Message here"></textarea>
+            <button class="contact__form-btn button" type="submit">send message</button>
           </form>
+
         </div>
       </div>
     </section>
@@ -240,10 +259,14 @@
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Quis ipsum suspendisse ultrices gravida.
         </p>
-        <form action="#" class="footer-top__form">
-          <input class="footer-top__form-input" type="email" placeholder="Your email address" required>
-          <button class="footer-top__form-btn button" type="submit">Subscribe</button>
-        </form>
+          <form class="footer-top__form send-form-newsletter" action="#">
+            <input type="hidden" name="project_name" value="marcho">
+            <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
+            <input type="hidden" name="form_subject" value="Marcho">
+            <input class="footer-top__form-input" value="seredniimykola@gmail.com" name="email" type="email"
+              placeholder="Your email address" required>
+            <button class="footer-top__form-btn button" type="submit">Subscribe</button>
+          </form>
       </div>
     </div>
     <div class="footer-bottom">

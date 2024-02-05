@@ -102,24 +102,42 @@ address {
 
 .button {
    min-width: 160px;
-   padding: 14px 5px;
+   padding: 15px 5px;
    text-align: center;
    background-color: $accent;
+   border: 1px solid transparent;
    text-transform: uppercase;
    @extend %roboto-400;
    color: #fff;
-   border: none;
    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
    cursor: pointer;
    display: inline-block;
-
+   transition: border-color 0.3s, box-shadow 0.3s ;
+   outline: none;
   &:focus,
   &:hover{
    border-color: #f9fafb;
    box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
-   outline: 0;
    }
+}
 
+.button-transparent {
+   color: $title;
+   min-width: 168px;
+   letter-spacing: 4px;
+   padding: 14px 5px;
+   display: block;
+   box-shadow: none;
+   border: 1px solid $accent;
+   background-color: transparent;
+   display: inline-block;
+   cursor: pointer;
+   transition: border-color 0.3s, box-shadow 0.3s ;
+   &:focus,
+   &:hover{
+       border-color: #b02a37;
+       box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
+   }
 }
 
 .hidden {

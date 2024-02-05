@@ -120,24 +120,27 @@
               </li>
             </ul>
           </div>
-          <form class="contact__form" action="#">
-            <p class="contact__form-title">
-              Contact Form
-            </p>
+          <form action="" class="contact__form uniForm">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="marcho">
+            <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
+            <input type="hidden" name="form_subject" value="Contact">
+            <p class="contact__form-title">Contact Form</p>
             <div class="contact__form-box">
-              <input class="contact__form-input" type="text" placeholder="Your Name">
-              <input class="contact__form-input" type="text" placeholder="Your E-mail Address">
+              <input class="contact__form-input" name="yourName" type="text" placeholder="Your Name">
+              <input class="contact__form-input" name="email" type="text" placeholder="Your E-mail Address">
             </div>
-            <input class="contact__form-input" type="text" placeholder="Subject">
-            <textarea class="contact__form-textarea" placeholder="Message here"></textarea>
-            <button class="contact__form-btn" type="submit">SEND MESSAGE</button>
+            <input class="contact__form-input" name="subject" type="text" placeholder="Subject">
+            <textarea class="contact__form-textarea" name="message" id="" cols="30" rows="10"
+              placeholder="Message here"></textarea>
+            <button class="contact__form-btn button" type="submit">send message</button>
           </form>
         </div>
       </div>
     </section>
 
 </main>
-<footer class="footer">
+<footer class="footer"> 
   <div class="container">
     <div class="footer-top">
       <div class="footer-top__item footer-top__contact">
@@ -239,7 +242,7 @@
         </p>
         <form action="#" class="footer-top__form">
           <input class="footer-top__form-input" type="email" placeholder="Your email address" required>
-          <button class="footer-top__form-btn" type="submit">Subscribe</button>
+          <button class="footer-top__form-btn button" type="submit">Subscribe</button>
         </form>
       </div>
     </div>

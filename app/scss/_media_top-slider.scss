@@ -1,10 +1,4 @@
-// @media(max-width: 1400px){
-//     .top-slider{
-//         &__content{
-//             padding-top: 0;
-//         }
-//     }
-// }
+
 
 @media(max-width: 1200px){
     .top-slider{
@@ -50,6 +44,17 @@
         &__images {
             display: none;
         }
+        .slick-dots {
+            bottom: 15px;   
+        }
+        &__title {
+            font-size: 35px;
+            margin-bottom: 17px;
+        }
+        &__text {
+            max-width: 430px;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -62,15 +67,15 @@
     }
 }
 
-@media(max-width: 375px){
+@media(max-width: 415px){
     .top-slider{
         &__title{
-            font-size: 38px;
-            line-height: 48px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            line-height: 37px;
+            margin-bottom: 13px;
         }
         &__text{
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
     }
 }

@@ -10,6 +10,9 @@
 
 @media(max-width: 1200px){
     .blog{
+        &::after{
+            display: none;
+        }
        &__item-box{
         padding: 20px 15px;
        }

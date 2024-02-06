@@ -208,17 +208,19 @@ address {
    }
 }
 
-@media(max-width: 620px){
-   .title{
-      font-size: 40px;
-      line-height: 48px;
-   }
-}
+input:invalid {
+   border: 2px dashed red;
+ }
+ 
+ input:valid {
+   // border: 2px solid black;
+ }
 
-@media(max-width: 375px){
+@media(max-width: 768px){
    .title{
       font-size: 32px;
       line-height: 40px;
    }
 }
+
 

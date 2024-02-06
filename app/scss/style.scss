@@ -90,6 +90,8 @@
 
 .user-nav{
         display: flex;
+        justify-content: center;
+        width: 230px;
     &__link{
         position: relative;
         padding: 3px;
@@ -244,12 +246,16 @@
     &__link{
         display: inline-block;
         padding: 3px 5px;
+        transition: color .3s;
         &:focus{
             background-color: #f9fafb;
             border-color: #f9fafb;
             box-shadow: 0 0 0 0.25rem rgba(211,212,213,.5);
             outline: 0;
             border-radius: 10px;
+        }
+        &:hover{
+            color: $accent;
         }
     }
     &__text{
@@ -305,13 +311,14 @@
 
 .top{
     margin-bottom: 112px;  
-    height: 370px;
+    // height: 370px;
     &-container{
         max-width: 1700px;
         margin: 0 auto;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+        background-color: #eeebec;
         text-align: center;
         padding: 124px 0 148px;
 
@@ -320,6 +327,7 @@
         margin-bottom: 13px;
     }
 }
+
 
 .top-slider{
     background-image: url('../images/decor/top-slider-bg.svg');
@@ -702,8 +710,10 @@
 
 .product-item{
     max-width: 370px;
+    overflow: hidden;
     text-align: center;
     margin: 0 auto;
+    position: relative;
     &.product-item--list{
         min-width: 100%;
         display: flex;
@@ -714,6 +724,7 @@
             }
         }
         .product-item__img-box{
+           
             display: block;
             height: 250px;
             min-width: 200px;
@@ -785,17 +796,21 @@
         display: none;
     }
     &__img-box{
-        position: relative;
+        a:focus {
+            display: block;
+            border: 2px solid red;
+         }
         height: 370px;
         overflow: hidden;
         margin-bottom: 29px;
+        display: block;
     }
     &__link-box{
-        transition: all .3s;
+        transition: transform 0.3s;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 155px;
         background-color: #fff;
         width: 220px;
         height: 50px;
@@ -805,7 +820,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        transform: translateY(300%);
+        transform: translateY(500%);
     }
     .line::before,
     .line::after{
@@ -826,6 +841,8 @@
     &__link{
         display: inherit;
         padding: 5px;
+        background-color: transparent;
+        border: none;
         &:focus{
             background-color: #f9fafb;
             border-color: #f9fafb;
@@ -845,11 +862,13 @@
     &__images{
         object-fit: cover;
     }
+
     &:hover{
         .product-item__link-box{
             transform: translateY(0);
         }
     }
+
     &__title{
         color: $title;
         font-size: 22px;
@@ -1748,8 +1767,11 @@
     }
 
     &__link{
-        path{
-            fill: $default;
+        svg{
+            path{
+                transition: fill .5s;
+                fill: $default;
+            }
         }
         & + .product-info__link{
             margin-left: 15px;
@@ -2049,7 +2071,8 @@
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 30px;
         .product-item__img-box{
-            height: auto;
+           
+            min-height: auto;
         }
         .product-item__title{
             padding: 5px 0;

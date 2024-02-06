@@ -13,6 +13,12 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
   el.addEventListener('submit', function (e) {
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
+
+    if(!validateEmail(data.email)){
+      alert('Email no valid')
+      return;
+    }
+
     console.log(data)
 
     fetch(mailPath1, {

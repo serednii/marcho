@@ -14,6 +14,12 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
     console.log(e)
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
+
+    if(!validateEmail(data.email)){
+      alert('Email no valid')
+      return;
+    }
+    
     console.log(data)
 
     fetch(mailPath, {

@@ -10,37 +10,43 @@
     justify-content: space-between;
     flex-direction: column;
     min-height: 100vh;
- }
- .container{
-    max-width: 1200px;
+    max-width: 1945px;
     margin: 0 auto;
     padding: 0 15px;
  }
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+ }
 
- .a{
+ a {
     font-size: 1rem;
     line-height: 1.2;
     color: $default;
     @extend %quicksand-500;
  }
 
- .title{
+address {
+   font-style: normal;
+}
+
+.title {
    text-align: center;
    @extend %roboto-700;
    font-size: 48px;
    line-height: 65px;
    color: $title;
-   margin-bottom: 10px;
+
    text-transform: uppercase;
- }
-
- .text{
+}
+ 
+.text {
    text-align: center;
-   max-width: 570px;
-   margin: 0 auto 55px;
- }
+   line-height: 1.5;
 
- .bleadcrumbs{
+}
+
+.bleadcrumbs {
    display: inline-flex;
    justify-content: center;
    padding-left: 25px;
@@ -80,6 +86,7 @@
          }
       }
    }
+   
    &__link{
       color: inherit;
       padding: 3px 5px;
@@ -91,26 +98,70 @@
      }
    }
    
- }
- .hidden {
+}
+
+.button {
+   min-width: 160px;
+   padding: 15px 5px;
+   text-align: center;
+   background-color: $accent;
+   border: 1px solid transparent;
+   text-transform: uppercase;
+   @extend %roboto-400;
+   color: #fff;
+   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+   cursor: pointer;
+   display: inline-block;
+   transition: border-color 0.3s, box-shadow 0.3s ;
+   outline: none;
+  &:focus,
+  &:hover{
+   border-color: #f9fafb;
+   box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
+   }
+}
+
+.button-transparent {
+   color: $title;
+   min-width: 168px;
+   letter-spacing: 4px;
+   padding: 14px 5px;
+   display: block;
+   box-shadow: none;
+   border: 1px solid $accent;
+   background-color: transparent;
+   display: inline-block;
+   cursor: pointer;
+   transition: border-color 0.3s, box-shadow 0.3s ;
+   &:focus,
+   &:hover{
+       border-color: #b02a37;
+       box-shadow: 0 0 0 0.25rem rgba(225,83,97,.5);
+   }
+}
+
+.hidden {
    visibility: hidden;
- }
+}
 
- .header--404-page{
+.header--404-page{
    background-color: $bg;
- }
+}
 
- .pagination{
+.pagination{
    display: flex;
    justify-content: center;
    padding: 30px 0;
+
    .pagination__list{
       display: flex;
       padding: 0 35px;
    }
+
    &__item{
       padding: 0 15px;
    }
+
    &__link{
       &:focus{
          border-color: #b02a37;
@@ -118,9 +169,11 @@
          outline: 0; 
      }
    }
+
    &__link--active{
       color: $accent;
    }
+
    &__arrows{
       text-transform: uppercase;
       position: relative;
@@ -137,6 +190,7 @@
          outline: 0; 
      }
    }
+
    &__prev{
       padding-left: 15px;
       &::before{
@@ -144,6 +198,7 @@
          left: 0;
       }
    }
+
    &__next{
       padding-right: 15px;
       &::before{
@@ -151,18 +206,21 @@
          right: 0;
       }
    }
+}
+
+input:invalid {
+   border: 2px dashed red;
+ }
+ 
+ input:valid {
+   // border: 2px solid black;
  }
 
- @media(max-width: 620px){
-   .title{
-      font-size: 40px;
-      line-height: 48px;
-   }
- }
- @media(max-width: 375px){
+@media(max-width: 768px){
    .title{
       font-size: 32px;
       line-height: 40px;
    }
- }
+}
+
 

@@ -286,16 +286,19 @@
                         </a>
                       </div>
                   </div>
-               
-                <form class="comments-form" action="#">
+        
+                <form class="comments-form send-form-mail" action="#">
+                    <input type="hidden" name="project_name" value="marcho">
+                    <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
+                    <input type="hidden" name="form_subject" value="Marcho">
                   <p class="blog-one__form__title">
                     LEAVE A REPLY
                   </p>
                 <div class="comments-form__box-input">
-                  <input class="comments-form__text-input" placeholder="Your name" type="text">
-                  <input class="comments-form__text-input" placeholder="E-mail address" type="text">
+                  <input class="comments-form__text-input" name="subject" placeholder="Your name" type="text" required>
+                  <input class="comments-form__text-input validate-email" name="email"  placeholder="E-mail address" type="text" required>
                 </div>
-                <textarea class="comments-form__textarea" placeholder="Your text here"></textarea>
+                <textarea class="comments-form__textarea" placeholder="Your text here" name="message" id="" cols="30" rows="10"></textarea>
                 <button class="comments-form__btn button" type="submit">POST COMMENT</button>
                 </form>
           </div>
@@ -604,7 +607,7 @@
           <input type="hidden" name="project_name" value="marcho">
           <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
           <input type="hidden" name="form_subject" value="Marcho">
-          <input class="footer-top__form-input" value="seredniimykola@gmail.com" name="email" type="email"
+          <input class="footer-top__form-input" value="" name="email" type="email"
             placeholder="Your email address" required>
           <button class="footer-top__form-btn button" type="submit">Subscribe</button>
         </form>

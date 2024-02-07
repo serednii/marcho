@@ -1124,7 +1124,9 @@
     max-width: 570px;
     margin: 0 auto 155px;
     &__links{
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 40px;
     }
     &__link{
@@ -1327,6 +1329,7 @@
             padding-bottom: 0;
 
         }
+       
     }
     
     &__input{
@@ -1336,13 +1339,19 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        &:focus + .filter-color__checkbox {
+                box-shadow: 0px 0px 20px 0px rgba(90, 90, 90,1.0);
+            }
+        
     }
+
     &__checkbox{
         width: 16px;
         height: 16px;
         position: absolute;
         margin-left: -16px;
         margin-top: 7px;
+     
     }
     &__checkbox--blue{
         background-color: #00aeef;
@@ -1369,6 +1378,9 @@
         padding-left: 35px;
         margin-bottom: 20px;
         display: block;
+        &:focus{
+            outline: 1px solid $accent;
+        }
     }
     &__input{
         @extend %checkbox-hidden;
@@ -1379,6 +1391,10 @@
                color: $accent; 
             }
         } 
+        &:focus + .filter-size__checkbox {
+            box-shadow: 0px 0px 9px 0px rgba(90, 90, 90,1.0);
+        }
+
     }
     &__checkbox{
         width: 20px;
@@ -1399,12 +1415,16 @@
         &:last-child{
             margin-bottom: 0;
         }
+      
     }
     &__input{
         @extend %checkbox-hidden;
         &:checked + .filter-category__checkbox{
             background-color: $accent;
             color: #fff;
+        }
+        &:focus + .filter-category__checkbox {
+            box-shadow: 0px 0px 20px 0px rgba(90, 90, 90,1.0);
         }
     }
     &__checkbox{
@@ -1423,6 +1443,10 @@
         margin-right: 8px;
         cursor: pointer;
         padding: 10px 0;
+        &:focus{
+            outline: 1px solid $accent;
+            padding: 5px;
+        }
     }
     &__input{
         @extend %checkbox-hidden;
@@ -1430,6 +1454,9 @@
             background-color: $accent;
             border-color: $accent;
             color: #fff;
+        }
+        &:focus + .filter-popular__checkbox {
+            box-shadow: 0px 0px 9px 0px rgba(90, 90, 90,1.0);
         }
     }
     &__checkbox{
@@ -1472,6 +1499,9 @@
             path{
                 fill: $accent;
             }
+        }
+        &:focus{
+            box-shadow: 0px 0px 9px 0px rgba(90, 90, 90,1.0);
         }
     }
 }
@@ -2142,15 +2172,7 @@
     }
       
     &__item-link{
-        display: block;
-        color: inherit;
-        font-family: inherit;
-        font-size: inherit;
-        &:focus{
-            border-color: #b02a37;
-            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
-            outline: 0; 
-        }
+       
     }
     
     &__img{
@@ -2167,6 +2189,7 @@
     }
 
     &__item-title{
+        display: block;
         color: #29282d;
         font-size: 22px;
         @extend %roboto-700;
@@ -2175,6 +2198,11 @@
         transition: all .3s;
         &:hover{
             color: $accent;
+        }
+        &:focus{
+            border-color: #b02a37;
+            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+            outline: 0; 
         }
     }
 

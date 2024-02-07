@@ -11,7 +11,7 @@ function formDataToObject(formData) {
 document.querySelectorAll('.send-form-mail').forEach((el) => {
 
   el.addEventListener('submit', function (e) {
-    console.log(e)
+    console.log(e.target)
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
 
@@ -20,7 +20,7 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       return;
     }
     
-    console.log(data)
+    // console.log(data)
 
     fetch(mailPath, {
       method: 'POST',
@@ -41,6 +41,8 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
         // Обробка відповіді від сервера
         if (result.success) {
           alert("Письмо отправлено");
+          clearForm(e)
+          // e.target.querySelectorAll('textarea').forEach(e => e.value = "")
         } else {
           alert("Письмо не отправлено произошла ошибка:  " + result.message);
         }

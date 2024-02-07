@@ -40,6 +40,7 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
         // Обробка відповіді від сервера
         if (result.success) {
           alert("Ви добавленні в розсилку, на вказану вами пошту було відправлено повідомлення");
+          clearForm(e)
         } else {
           alert("Ви не добавленні в розсилку виникла помилка:  " + result.message);
         }

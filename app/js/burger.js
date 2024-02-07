@@ -5,7 +5,7 @@
 //   documentEl: document,
 //   htmlEl: document.documentElement,
 //   bodyEl: document.body,
-// } 
+// }
 
 // const disableScroll = () => {
 //   const fixBlocks = document?.querySelectorAll('.fixed-block');

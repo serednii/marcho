@@ -1,0 +1,157 @@
+.promo {
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: cover;
+    padding: 150px 0 160px;
+    text-align: center;
+
+    &__inner {
+        max-width: 590px;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    &__title {
+        margin-bottom: 47px;
+    }
+
+    &__subtitle {
+        color: $accent;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    &__clock {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 65px;
+    }
+
+    &__clock-item {
+        background-color: #fff;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        span {
+            font-size: 48px;
+            @extend %roboto-700;
+            margin-bottom: 10px 0 7px;
+            color: $title;
+        }
+    }
+
+    &__link {
+        color: $title;
+        min-width: 168px;
+        letter-spacing: 4px;
+        display: block;
+        box-shadow: none;
+        border: 1px solid $accent;
+        margin: 0 auto;
+        background-color: transparent;
+
+        &:focus {
+            border-color: #b02a37;
+        }
+
+
+    }
+}
+
+
+.partners {
+    padding-top: 117px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 85px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(max-width: 920px) {
+    .promo {
+        background-size: 0;
+        padding: 60px 0;
+    }
+
+    .promo__inner {
+        margin: 0 auto;
+    }
+
+}
+
+
+@media(max-width: 620px) {
+    .promo {
+        &__title {
+            margin-bottom: 15px;
+        }
+
+        &__clock {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        &__clock-item {
+            margin: 0px;
+            width: 95px;
+            height: 100px;
+        }
+
+        &__clock-item {
+            span {
+                font-size: 38px;
+            }
+        }
+
+
+    }
+
+    .partners {
+        padding: 60px 0;
+
+        &__list {
+            gap: 45px;
+            justify-content: center;
+        }
+
+        &__item {
+            margin: 10px 35px;
+        }
+    }
+}
+
+@media(max-width: 450px) {
+    .promo {
+        &__clock {
+            margin-top: 30px;
+        }
+
+        &__clock-item {
+            margin: 8px;
+        }
+
+        &__link {
+            margin-top: 30px;
+        }
+    }
+
+    .partners {
+        padding: 30px 0;
+
+        &__item {
+            margin: 10px 25px;
+        }
+    }
+}

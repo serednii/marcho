@@ -44,11 +44,7 @@
         padding-left: 28px;
         position: relative;
         &:focus{
-            background-color: #f9fafb;
-            border-color: #f9fafb;
-            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-            outline: 0;
-            border-radius: 10px; 
+            @include white-focus;
         }
         &::before{
             content: '';
@@ -96,11 +92,7 @@
         a{
             padding: 3px;       
             &:focus{
-                background-color: #f9fafb;
-                border-color: #f9fafb;
-                box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-                outline: 0;
-                border-radius: 10px; 
+                @include white-focus;
             }
         }
     }
@@ -118,15 +110,13 @@
             path{
                 fill: #727272;
             }
+
             &:focus{
-                background-color: #f9fafb;
-                border-color: #f9fafb;
-                box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-                outline: 0;
-                border-radius: 10px; 
+                @include white-focus;
             }
         }
     }
+
     &__author{
         border-bottom: 1px solid #ececec;
         padding-bottom: 40px;

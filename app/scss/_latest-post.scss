@@ -17,32 +17,29 @@
             padding-top: 20px;
         }
     }
-    &__img-link{
+    &__img-link,
+    &__title-link{
         display: block;
-        margin-right: 20px;
-        min-width: 80px;
         &:focus{
-            border-color: #b02a37;
-            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
-            outline: 0; 
+            @include red-focus; 
         }
     }
+    &__img-link{
+        margin-right: 20px;
+        min-width: 80px;
+    }
+
     &__img{
         width: 80px;
         height: 80px;
         object-fit: cover;
     }
+
     &__title-link{
-        display: block;
         font-size: 18px;
         @extend %roboto-400;
         color: $title;
         line-height: 28px;
-        &:focus{
-            border-color: #b02a37;
-            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
-            outline: 0; 
-        } 
     }
   
     &__data{

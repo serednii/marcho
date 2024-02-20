@@ -18,11 +18,7 @@
         margin: 0 25px;
 
         &:focus {
-            background-color: #f9fafb;
-            border-color: #f9fafb;
-            box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
-            outline: 0;
-            border-radius: 10px;
+            @include white-focus;
         }
     }
 
@@ -34,6 +30,12 @@
         display: block;
         margin-bottom: 30px;
     }
+    &__input,
+    &__error {
+        &:focus {
+            @include red-focus;
+        }
+    }
 
     &__input {
         display: block;
@@ -44,11 +46,7 @@
         height: 60px;
         padding: 0 15px;
 
-        &:focus {
-            border-color: #b02a37;
-            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, .5);
-            outline: 0;
-        }
+       
     }
 
     &__btn {
@@ -73,12 +71,6 @@
 
     &__error {
         color: $accent;
-
-        &:focus {
-            border-color: #b02a37;
-            box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, .5);
-            outline: 0;
-        }
     }
 
     &__text {

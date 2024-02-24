@@ -1,0 +1,116 @@
+.header {
+    margin-bottom: 34px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 27px;
+    }
+
+    .logo {
+        display: inline-block;
+        padding: 5px;
+
+        &:focus {
+            @include white-focus;
+        }
+    }
+}
+
+
+.header__logo-animation {
+    position: relative;
+    animation: render 4s ease-in-out infinite;
+}
+
+@keyframes render {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        scale: 0.5;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 40px 0;
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 15px;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .menu {
+        margin-left: 40px;
+        order: 1;
+
+        &__btn {
+            display: block;
+            top: 50px;
+            right: 15px;
+            position: fixed;
+            z-index: 10;
+        }
+
+        &__list {
+            transform: translateY(-200%);
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+            transition: all .3s;
+            background-color: #fff;
+
+            &.menu--active {
+                transform: translateY(0%);
+                transition: all .3s;
+            }
+        }
+
+        &__list-item+.menu__list-item {
+            padding-left: 15px;
+        }
+
+        &__list-item {
+            width: 100%;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        &__list-link {
+            display: block;
+            padding: 12px 0;
+        }
+
+    }
+
+    .user-nav {
+        margin: 0 auto;
+    }
+
+    .top-container {
+        background-image: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__inner {
+            padding-right: 0;
+        }
+    }
+}

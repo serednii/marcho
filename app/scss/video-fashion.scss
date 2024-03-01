@@ -4,8 +4,7 @@
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 725px;
-    margin-bottom: 120px;
+    padding: 125px 0;
 
     &__inner {
         display: flex;
@@ -13,16 +12,21 @@
 
     &__popup {
         margin-right: 76px;
-        max-width: 530px;
-        width: 100%;
+        // max-width: 530px;
+        // width: 100%;
+        flex-basis: 530px;
+        flex-shrink: 0;
         height: 480px;
         display: flex;
+        // background-image: image-set(
+        //         url("../images/video-fashion.avif") type("image/avif"),
+        //         url("../images/video-fashion.jpg") type("image/jpg"),
+        //         url("../images/video-fashion.webp") type("image/webp"));
         justify-content: center;
         align-items: center;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        margin-bottom: 75px;
     }
 
     &__content {
@@ -75,10 +79,14 @@
         &__popup {
             max-width: 100%;
             background-position: center top;
+            margin-bottom: 50px;
+            margin-right: 0;
         }
+
 
         &__content {
             padding: 0px 20px 30px;
+            margin: 0 auto;
         }
     }
 }

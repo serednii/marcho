@@ -1,0 +1,47 @@
+.partners {
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 85px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(max-width: 920px) {
+
+    .partners {
+        &__list {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media(max-width: 620px) {
+
+    .partners {
+        padding: 60px 0;
+
+        &__list {
+            gap: 45px;
+            justify-content: center;
+        }
+
+        &__item {
+            margin: 10px 35px;
+        }
+    }
+}
+
+@media(max-width: 450px) {
+
+    .partners {
+        padding: 30px 0;
+
+        &__item {
+            margin: 10px 25px;
+        }
+    }
+}

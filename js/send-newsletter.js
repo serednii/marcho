@@ -14,7 +14,7 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
 
-    if(!validateEmail(data.email)){
+    if (!validateEmail(data.email)) {
       alert('Email no valid')
       return;
     }
@@ -39,10 +39,13 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          alert("Ви добавленні в розсилку, на вказану вами пошту було відправлено повідомлення");
+          // alert("Ви добавленні в розсилку, на вказану вами пошту було відправлено повідомлення");
+          showInformationSendMail("You have been added to the mailing list, a confirmation has been sent to the email you specified", 'send-message-popup');
           clearForm(e)
         } else {
           alert("Ви не добавленні в розсилку виникла помилка:  " + result.message);
+          showInformationSendMail("You are not added to the newsletter, an error occurred, please try again later:  " + result.message, 'send-message-popup');
+
         }
       })
       .catch(error => {

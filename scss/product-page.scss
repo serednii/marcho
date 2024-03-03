@@ -1,16 +1,12 @@
+.product-page {
+    padding: 0;
+}
+
 .shop-content {
     width: 100%;
 
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
 
-        .product-item {
-            margin-bottom: 40px;
-        }
-    }
-
+    //shop-content__filter
     &__filter {
         border: 1px solid #ececec;
         padding: 20px 25px 20px 30px;
@@ -18,6 +14,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__filter-buttons {
@@ -44,117 +42,254 @@
             box-shadow: 0px 0px 9px 0px rgba(90, 90, 90, 1.0);
         }
     }
-}
 
-
-.shop-content__filter-sort {
-    @extend %quicksand-500;
-    font-size: 16px;
-}
-
-.jq-selectbox__select {
-    margin-left: 0px;
-    width: 100%;
-    height: 32px;
-    padding: 0 30px 0 0;
-    border: transparent;
-    background: transparent;
-    box-shadow: none;
-    @extend %quicksand-500;
-    color: $default;
-    text-shadow: none;
-    border: 1px solid transparent;
-    /* задаэмо розмыр щоб кнопка не скакала рамка кругом кнопки*/
-    border-radius: 3px;
-
-    &:hover {
-        background: transparent;
-        border-color: transparent;
+    &__filter-sort {
+        @extend %quicksand-500;
+        font-size: 16px;
+        width: 150px;
     }
-}
+
+    &__filter-show {
+        width: 100px;
+    }
+
+    &__select-text {
+        padding: 0 5px;
+    }
+
+    .jq-selectbox__select {
+        margin-left: 0px;
+        width: 100%;
+        height: 32px;
+        padding: 0 30px 0 0;
+        border: transparent;
+        background: transparent;
+        box-shadow: none;
+        @extend %quicksand-500;
+        color: $default;
+        text-shadow: none;
+        border: 1px solid transparent;
+        /* задаэмо розмыр щоб кнопка не скакала рамка кругом кнопки*/
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+            border-color: transparent;
+        }
+    }
 
 
-.jq-selectbox__trigger {
-    border-left: transparent;
-}
-
-.jq-selectbox__trigger-arrow {
-    position: absolute;
-    top: 4px;
-    right: 8px;
-    width: 15px;
-    height: 8px;
-    border-top: transparent;
-    background-image: url("../images/icons/angle_down.svg");
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-}
-
-.jq-selectbox.opened {
+    .jq-selectbox__trigger {
+        border-left: transparent;
+    }
 
     .jq-selectbox__trigger-arrow {
-        top: 7px;
-        right: 1px;
-        transform: rotate(0deg);
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        width: 15px;
+        height: 8px;
+        border-top: transparent;
+        background-image: url("../images/icons/angle_down.svg");
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
     }
+
+    .jq-selectbox.opened {
+
+        .jq-selectbox__trigger-arrow {
+            top: 7px;
+            right: 1px;
+            transform: rotate(0deg);
+        }
+    }
+
+
+    .jq-selectbox__dropdown {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 2px 0 0;
+        padding: 0;
+        border: 1px solid #CCC;
+        border-radius: 4px;
+        background: #FFF;
+
+        li {
+            cursor: pointer;
+        }
+    }
+
+    .jq-selectbox ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .jq-selectbox li {
+        min-height: 18px;
+        padding: 5px 10px 6px;
+        color: #231F20;
+    }
+
+    .jq-selectbox li.selected {
+        background-color: #A3ABB1;
+        color: #FFF;
+    }
+
+    .jq-selectbox li:hover {
+        background-color: #08C;
+        color: #FFF;
+    }
+
+    .jq-selectbox__select {}
+
+    .jq-selectbox.focused .jq-selectbox__select {
+        border: 1px solid #5794BF;
+        /* рамка кругом кнопки*/
+    }
+
+    //end shop-content__filter
+
+    // shop-content__inner
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product-item {
+            margin-bottom: 40px;
+        }
+    }
+
+    //shop-content__inner
+
+
 }
 
-
-.jq-selectbox__dropdown {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 2px 0 0;
-    padding: 0;
-    border: 1px solid #CCC;
-    border-radius: 4px;
-    background: #FFF;
-}
-
-.jq-selectbox ul {
-    margin: 0;
-    padding: 0;
-}
-
-.jq-selectbox li {
-    min-height: 18px;
-    padding: 5px 10px 6px;
-    color: #231F20;
-}
-
-.jq-selectbox li.selected {
-    background-color: #A3ABB1;
-    color: #FFF;
-}
-
-.jq-selectbox li:hover {
-    background-color: #08C;
-    color: #FFF;
-}
-
-.jq-selectbox__select {}
-
-.jq-selectbox.focused .jq-selectbox__select {
-    border: 1px solid #5794BF;
-    /* рамка кругом кнопки*/
-}
-
-.shop-content__filter-sort {
-    width: 150px;
-}
+// .shop-content__filter-sort {
+//     width: 150px;
+// }
 
 
-.shop-content__filter-show {
-    width: 100px;
-}
+// .shop-content__filter-show {
+//     width: 100px;
+// }
 
-.jq-selectbox__select-text {
-    padding: 0 5px;
-}
+// .jq-selectbox__select-text {
+//     padding: 0 5px;
+// }
 
-.product-page {
-    padding: 0;
-}
+
+
+// .shop-content__filter-sort {
+//     @extend %quicksand-500;
+//     font-size: 16px;
+// }
+
+// .jq-selectbox__select {
+//     margin-left: 0px;
+//     width: 100%;
+//     height: 32px;
+//     padding: 0 30px 0 0;
+//     border: transparent;
+//     background: transparent;
+//     box-shadow: none;
+//     @extend %quicksand-500;
+//     color: $default;
+//     text-shadow: none;
+//     border: 1px solid transparent;
+//     /* задаэмо розмыр щоб кнопка не скакала рамка кругом кнопки*/
+//     border-radius: 3px;
+//     cursor: pointer;
+
+//     &:hover {
+//         background: transparent;
+//         border-color: transparent;
+//     }
+// }
+
+
+// .jq-selectbox__trigger {
+//     border-left: transparent;
+// }
+
+// .jq-selectbox__trigger-arrow {
+//     position: absolute;
+//     top: 4px;
+//     right: 8px;
+//     width: 15px;
+//     height: 8px;
+//     border-top: transparent;
+//     background-image: url("../images/icons/angle_down.svg");
+//     background-repeat: no-repeat;
+//     transform: rotate(180deg);
+// }
+
+// .jq-selectbox.opened {
+
+//     .jq-selectbox__trigger-arrow {
+//         top: 7px;
+//         right: 1px;
+//         transform: rotate(0deg);
+//     }
+// }
+
+
+// .jq-selectbox__dropdown {
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     width: 100%;
+//     margin: 2px 0 0;
+//     padding: 0;
+//     border: 1px solid #CCC;
+//     border-radius: 4px;
+//     background: #FFF;
+
+//     li {
+//         cursor: pointer;
+//     }
+// }
+
+// .jq-selectbox ul {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .jq-selectbox li {
+//     min-height: 18px;
+//     padding: 5px 10px 6px;
+//     color: #231F20;
+// }
+
+// .jq-selectbox li.selected {
+//     background-color: #A3ABB1;
+//     color: #FFF;
+// }
+
+// .jq-selectbox li:hover {
+//     background-color: #08C;
+//     color: #FFF;
+// }
+
+// .jq-selectbox__select {}
+
+// .jq-selectbox.focused .jq-selectbox__select {
+//     border: 1px solid #5794BF;
+//     /* рамка кругом кнопки*/
+// }
+
+
+
+
+
+
+// end select
+
+
+
+
+
 
 .jq-number__field {
     width: 114px;
@@ -232,7 +367,7 @@
 
     &__text {
         a {
-            &:focus {      
+            &:focus {
                 @include white-focus;
             }
         }
@@ -713,9 +848,10 @@
             }
         }
     }
-}
 
-@media(max-width: 860px) {
+    // }
+
+    // @media(max-width: 860px) {
     .related {
         &__items {
             grid-template-columns: repeat(2, 1fr);
@@ -752,9 +888,10 @@
             margin-right: 0;
         }
     }
-}
 
-@media(max-width: 500px) {
+    // }
+
+    // @media(max-width: 500px) {
     .product-tabs {
         &__top-item {
             display: block;
@@ -765,9 +902,10 @@
             }
         }
     }
-}
 
-@media(max-width: 450px) {
+    // }
+
+    // @media(max-width: 450px) {
     .product-page {
         padding-top: 60px;
     }

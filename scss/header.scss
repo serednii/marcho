@@ -25,12 +25,21 @@
 }
 
 @keyframes render {
+
     0% {
-        top: 0;
+        scale: 1;
     }
 
     50% {
-        scale: 0.5;
+        scale: 1;
+    }
+
+    75% {
+        scale: 0.8;
+    }
+
+    100% {
+        scale: 1;
     }
 
 }

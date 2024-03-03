@@ -1,4 +1,4 @@
-.modal {
+.sing-in-up {
     max-width: 570px;
     margin: 0 auto 155px;
 
@@ -30,6 +30,7 @@
         display: block;
         margin-bottom: 30px;
     }
+
     &__input,
     &__error {
         &:focus {
@@ -46,7 +47,11 @@
         height: 60px;
         padding: 0 15px;
 
-       
+        &:invalid {
+            border: 2px dashed red;
+        }
+
+
     }
 
     &__btn {
@@ -79,7 +84,7 @@
 }
 
 @media(max-width: 375px) {
-    .modal__link {
+    .sing-in-up__link {
         margin: 0 20px;
     }
 }

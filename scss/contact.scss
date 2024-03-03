@@ -136,7 +136,7 @@
         margin-bottom: 30px;
 
         &:focus {
-            @include red-focus; 
+            @include red-focus;
         }
     }
 
@@ -200,9 +200,9 @@
         padding: 60px 0;
     }
 
-    #map {
-        height: 250px;
-    }
+    // #map {
+    //     height: 250px;
+    // }
 
     .contact {
         &__info-title {

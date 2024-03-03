@@ -10,8 +10,9 @@ $(function () {
   //   $('.menu__btn').toggleClass('menu__btn--active');
   // });
 
-  $('.shop__filter-btn').on('click', function (){
+  $('.shop__filter-btn').on('click', function () {
     $('.shop__filters').slideToggle();
+    $('body').toggleClass('overflow-hidden');
   });
 
   $('.footer-top__title').on('click', function () {
@@ -50,7 +51,6 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
-    
   });
 
 
@@ -77,7 +77,7 @@ $(function () {
 
   //-------------------------------------------------
   // Jquery-form-styler
-    $('.select-style, .product-one__num').styler();
+  $('.select-style, .product-one__num').styler();
   //-------------------------------
 
   // filter price

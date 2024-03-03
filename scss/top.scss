@@ -1,0 +1,35 @@
+.top {
+    margin-bottom: 112px;
+
+    &-container {
+        max-width: 1700px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        text-align: center;
+        padding: 124px 0 148px;
+    }
+
+    &__title {
+        margin-bottom: 13px;
+    }
+}
+
+
+
+@media(max-width: 450px) {
+    .top {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .top-container {
+        background-image: none !important;
+        background-color: #eeebec;
+    }
+
+
+}

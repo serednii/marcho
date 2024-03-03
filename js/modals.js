@@ -26,6 +26,7 @@ const showInformationSendMail = (message, path) => {
 
 btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+        document.body.style.overflowY = 'hidden';
         let path = e.currentTarget.getAttribute('data-path');
         console.log(path)
         showInformationSendMail("", path);
@@ -45,6 +46,7 @@ btns.forEach((btn) => {
 
 modalOverlay && modalOverlay.addEventListener('click', (e) => {
     if (e.target == modalOverlay) {
+        document.body.style.overflowY = 'auto';
         // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {
@@ -63,6 +65,7 @@ modalOverlay && modalOverlay.addEventListener('click', (e) => {
 
 modalCloseBtn.forEach(e => {
     e.addEventListener('click', (e) => {
+        document.body.style.overflowY = 'auto';
         // modalOverlay.classList.remove('modal-overlay--visible');
         modals.forEach((el) => {
             if (el.classList.contains('modal--visible')) {

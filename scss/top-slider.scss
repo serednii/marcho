@@ -10,7 +10,8 @@
 
     &__item {
         position: relative;
-        min-height: 676px;
+        min-height: clamp(290px, 28vw, 630px);
+
 
     }
 
@@ -26,8 +27,7 @@
         position: absolute;
         object-fit: contain;
         bottom: 0;
-        width: 650px;
-        height: 630px;
+        height: 100%;
         right: 222px;
     }
 
@@ -137,10 +137,6 @@
 @media(max-width: 1200px) {
     .top-slider {
 
-        &__item {
-            min-height: 450px;
-        }
-
         &__content {
             padding-top: 0;
             padding-left: 20px;
@@ -149,8 +145,6 @@
 
         &__img {
             margin: 0 auto;
-            width: 470px;
-            height: auto;
         }
 
         &__title {
@@ -162,13 +156,6 @@
 
 @media(max-width: 900px) {
     .top-slider {
-        &__item {
-            min-height: 320px;
-        }
-
-        &__img {
-            width: 300px;
-        }
 
         .slick-dots {
             margin-top: 0;
@@ -217,19 +204,5 @@
         }
     }
 }
-
-// @media(max-width: 415px) {
-//     .top-slider {
-//         &__title {
-//             font-size: 32px;
-//             line-height: 37px;
-//             margin-bottom: 13px;
-//         }
-
-//         &__text {
-//             margin-bottom: 20px;
-//         }
-//     }
-// }
 
 //------------------------------------

@@ -4,8 +4,8 @@
 
 $(function () {
 
-  function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
+  function getTimeRemaining(endTime) {
+    var t = Date.parse(endTime) - Date.parse(new Date());
     var seconds = Math.floor((t / 1000) % 60);
     var minutes = Math.floor((t / 1000 / 60) % 60);
     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -21,17 +21,17 @@ $(function () {
 
   }
 
-  function initializeClock(id, endtime) {
+  function initializeClock(id, endTime) {
+    var clock = document.querySelector(id);
     if (clock) {
-      var clock = document.querySelector('.promo__clock');
       var daysSpan = clock.querySelector('.promo__days');
       var hoursSpan = clock.querySelector('.promo__hours');
       var minutesSpan = clock.querySelector('.promo__minutes');
       var secondsSpan = clock.querySelector('.promo__seconds');
-      const timeinterval = setInterval(updateClock, 1000);
+      const timeInterval = setInterval(updateClock, 1000);
 
       function updateClock() {
-        var t = getTimeRemaining(endtime);
+        var t = getTimeRemaining(endTime);
 
         daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML = ('0' + t?.hours).slice(-2);
@@ -39,7 +39,7 @@ $(function () {
         secondsSpan.innerHTML = ('0' + t?.seconds).slice(-2);
 
         if (t?.total <= 0) {
-          clearInterval(timeinterval);
+          clearInterval(timeInterval);
         }
       }
       updateClock();
@@ -50,7 +50,7 @@ $(function () {
 
   const deadline = $('.promo__clock').attr('data-time');
 
-  initializeClock('promo__clock', deadline);
+  initializeClock('.promo__clock', deadline);
 
 
 

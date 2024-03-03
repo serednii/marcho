@@ -1,24 +1,3 @@
-.top {
-    margin-bottom: 112px;
-
-    // height: 370px;
-    &-container {
-        max-width: 1700px;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        background-color: #eeebec;
-        text-align: center;
-        padding: 124px 0 148px;
-
-    }
-
-    &__title {
-        margin-bottom: 13px;
-    }
-}
-
 .contact {
     padding-bottom: 120px;
 
@@ -136,7 +115,7 @@
         margin-bottom: 30px;
 
         &:focus {
-            @include red-focus; 
+            @include red-focus;
         }
     }
 
@@ -192,17 +171,14 @@
 }
 
 @media(max-width: 450px) {
-    .top {
-        padding-bottom: 0;
-    }
 
     .map {
         padding: 60px 0;
     }
 
-    #map {
-        height: 250px;
-    }
+    // #map {
+    //     height: 250px;
+    // }
 
     .contact {
         &__info-title {

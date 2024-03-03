@@ -51,7 +51,6 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
-
   });
 
 

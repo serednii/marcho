@@ -1,4 +1,4 @@
-.modal {
+.sing-in-up {
     max-width: 570px;
     margin: 0 auto 155px;
 
@@ -48,7 +48,7 @@
         padding: 0 15px;
 
         &:invalid {
-            border: 2px dashed red;
+            border: 1px solid red;
         }
 
 
@@ -84,7 +84,7 @@
 }
 
 @media(max-width: 375px) {
-    .modal__link {
+    .sing-in-up__link {
         margin: 0 20px;
     }
 }

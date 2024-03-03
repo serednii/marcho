@@ -15,11 +15,11 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
 
-    if(!validateEmail(data.email)){
+    if (!validateEmail(data.email)) {
       alert('Email no valid')
       return;
     }
-    
+
     // console.log(data)
 
     fetch(mailPath, {
@@ -40,11 +40,13 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          alert("Письмо отправлено");
+          // alert("The letter has been sent");
+          showInformationSendMail("Letter sent", 'send-message-popup');
           clearForm(e)
           // e.target.querySelectorAll('textarea').forEach(e => e.value = "")
         } else {
-          alert("Письмо не отправлено произошла ошибка:  " + result.message);
+          // alert("Письмо не отправлено произошла ошибка:  " + result.message);
+          showInformationSendMail("The message was not sent, there was an error:  " + result.message, 'send-message-popup');
         }
       })
       .catch(error => {

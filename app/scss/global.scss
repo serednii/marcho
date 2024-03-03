@@ -163,6 +163,9 @@
 
  .hidden {
     visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
  }
 
  .header--404-page {

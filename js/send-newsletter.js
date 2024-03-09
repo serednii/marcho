@@ -33,19 +33,15 @@ document.querySelectorAll('.send-form-newsletter').forEach((el) => {
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *client
       body: JSON.stringify(data),
-      // body: params,
     })
       .then(response => response.json())
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          // alert("Ви добавленні в розсилку, на вказану вами пошту було відправлено повідомлення");
-          showInformationSendMail("You have been added to the mailing list, a confirmation has been sent to the email you specified", 'send-message-popup');
+          alert("Ви добавленні в розсилку, на вказану вами пошту було відправлено повідомлення");
           clearForm(e)
         } else {
           alert("Ви не добавленні в розсилку виникла помилка:  " + result.message);
-          showInformationSendMail("You are not added to the newsletter, an error occurred, please try again later:  " + result.message, 'send-message-popup');
-
         }
       })
       .catch(error => {

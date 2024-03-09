@@ -14,18 +14,3 @@ function clearForm(formElement) {
 }
 
 
-//Зменшує переданий елемент по ширині від діючого значення до 0
-//Перший параметр сам елемент узел
-//другий параметр калбек функція яка буде виконуватися коли елемент зменшиться до нуля, в ній добе запускати команди наприклад позабирати або дадоти класи 
-const CollapsingTheElementByWidth = (element, callback) => {
-    let widthPoppa = element.offsetWidth;
-    const timerWidth = setInterval(() => {
-        widthPoppa -= 5;
-        element.style.maxWidth = widthPoppa + "px";
-        if (widthPoppa <= 0) {
-            // element.style.width = "";
-            callback();
-            clearInterval(timerWidth);
-        }
-    }, 1);
-}   

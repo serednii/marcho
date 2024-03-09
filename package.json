@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "homepage": "https://github.com/eliofery/marcho",
+  "homepage": "https://github.com/serednii/marcho",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d app"

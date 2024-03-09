@@ -45,7 +45,6 @@ function scripts() {
       'app/js/other-function.js',
       'app/js/validate.js',
       'app/js/functions.js',
-      'app/js/modals.js',
       'app/js/button-focus.js',
       'app/js/clock.js',
       'app/js/burger.js',

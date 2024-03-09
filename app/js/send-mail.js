@@ -20,8 +20,6 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       return;
     }
 
-    // console.log(data)
-
     fetch(mailPath, {
       method: 'POST',
       mode: 'cors', // no-cors, *cors, same-origin
@@ -34,19 +32,15 @@ document.querySelectorAll('.send-form-mail').forEach((el) => {
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *client
       body: JSON.stringify(data),
-      // body: params,
     })
       .then(response => response.json())
       .then(result => {
         // Обробка відповіді від сервера
         if (result.success) {
-          // alert("The letter has been sent");
-          showInformationSendMail("Letter sent", 'send-message-popup');
+          alert("The letter has been sent");
           clearForm(e)
-          // e.target.querySelectorAll('textarea').forEach(e => e.value = "")
         } else {
-          // alert("Письмо не отправлено произошла ошибка:  " + result.message);
-          showInformationSendMail("The message was not sent, there was an error:  " + result.message, 'send-message-popup');
+          alert("Письмо не отправлено произошла ошибка:  " + result.message);
         }
       })
       .catch(error => {

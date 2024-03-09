@@ -5,58 +5,22 @@
 @import 'mixin';
 
 @import 'global';
+
 @import 'burger';
 @import 'filters';
 @import 'modals';
-
-
 @import 'header';
 @import 'top';
 @import 'top-slider';
-
 @import 'header';
 @import 'menu';
 @import '_404';
-
-// .jq-selectbox__select {
-//     @extend %quicksand-500;
-//     height: 32px;
-//     padding: 0 30px 0 0;
-//     border: none;
-//     background: transparent;
-//     box-shadow: none;
-//     color: $default;
-//     text-shadow: none;
-//     &:hover{
-//         background: transparent;
-//     }
-// }
-
-// .jq-selectbox__trigger{
-//     border-left: none;
-// }
-
-// .jq-selectbox__trigger-arrow {
-//     position: absolute;
-//     top: 8px;
-//     right: 12px;
-//     width: 10px;
-//     height: 5px;
-//     border: none;
-//     background-image: url('../images/icons/angle_down.svg');
-// }
-
-
-
 @import 'latest-post';
-
 @import 'blog-one';
 @import 'person';
-
 @import 'map';
 @import 'contact';
 @import 'pagination';
-
 @import 'header';
 @import 'footer';
 @import 'categories';
@@ -67,8 +31,6 @@
 @import 'blog-page';
 @import 'blog';
 @import 'login';
-// @import 'media_blog-one';
-// @import 'media_contact';
 @import 'shop';
 @import 'product-page';
 @import "captcha";

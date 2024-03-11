@@ -1,4 +1,4 @@
-const mailPath = 'http://nastya03.zzz.com.ua/send-mail.php';
+const mailPath = 'http://marcho/smm.zzz.com.ua/send-mail.php';
 
 function formDataToObject(formData) {
   let jsonObject = {};

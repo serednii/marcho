@@ -57,9 +57,9 @@ a {
 }
 
 button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .jq-number__field input, .shop-content .jq-selectbox__select, .shop-content__filter-sort, .page-404__text, a, body {

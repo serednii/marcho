@@ -55,7 +55,7 @@ a {
 }
 
 button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  border: none !important;
 }
